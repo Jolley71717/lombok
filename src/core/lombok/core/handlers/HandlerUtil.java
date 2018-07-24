@@ -103,7 +103,7 @@ public class HandlerUtil {
 		FlagUsageType fut = node.getAst().readConfiguration(key);
 		
 		if (fut == null && AllowHelper.isAllowable(key)) {
-			node.addError("Use of " + featureName + " is disabled by default. Please add '" + key.getKeyName() + " = " + FlagUsageType.ALLOW + "' to 'lombok.config' if you want to enable is.");
+			node.addError("Use of " + featureName + " is disabled by default. Please add '" + key.getKeyName() + " = " + FlagUsageType.ALLOW + "' to 'lombok.config' if you want to enable it.");
 		}
 		
 		if (fut != null) {
